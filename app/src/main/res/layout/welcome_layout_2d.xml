@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2015 Baidu, Inc. All Rights Reserved.
+  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF">
+
+    <com.sunshine.engine.app.bone.BoneView
+        android:id="@+id/welcome_stage_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <com.sunshine.engine.app.bone.WelcomeScrollView
+        android:id="@+id/welcome_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clipChildren="false">
+        <!--第一页-->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></RelativeLayout>
+        <!--第二页-->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></RelativeLayout>
+        <!--第三页-->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"></RelativeLayout>
+    </com.sunshine.engine.app.bone.WelcomeScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:background="#3a000000"
+        android:padding="10dp"
+        android:text="2D"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+</RelativeLayout>
