@@ -60,6 +60,7 @@ void PicLoader::loadPic(string oldDataId, string newDataId, string url, int w, i
                 pthread_t thread;
                 if (pthread_create(&thread, NULL, loadPic, ptThreadInfo) == 0) {
                     mLstThread[i] = true;
+                    break;
                 } else {
                     delete ptThreadInfo;
                 }
