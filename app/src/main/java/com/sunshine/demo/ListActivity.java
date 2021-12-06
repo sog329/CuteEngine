@@ -155,7 +155,22 @@ public class ListActivity extends Activity {
     mLstUrl.add(picUrl);
     LogTool.show("picUrl[" + index + "]=" + picUrl);
     long t = System.currentTimeMillis();
-    mView.addListViewData("iv[" + index + "]", "find", picUrl, "Try[" + index + "]");
+    String name = index + ".";
+    switch (index % 4) {
+      case 0:
+        name += "骨骼动画Demo_2D";
+        break;
+      case 1:
+        name += "骨骼动画Demo_3D";
+        break;
+      case 2:
+        name += "VrDemo";
+        break;
+      case 3:
+        name += "全景Demo";
+        break;
+    }
+    mView.addListViewData("iv[" + index + "]", "find", picUrl, name);
     LogTool.show("addData cost:" + (System.currentTimeMillis() - t) + "ms");
   }
 }

@@ -213,10 +213,19 @@ public class BmpHelper {
     }
     // todo 因内网链接失效，暂用序号图表示全景瓦片图，等找到链接后更新恢复
     if (null == bitmap && null != imageUrl && imageUrl.contains("pos=")) {
-      int n = imageUrl.indexOf("pos=") + 4;
-      bitmap =
-          getBitmapByText(
-              200, 200, imageUrl.substring(n, n + 3), 50, Color.BLACK, Color.WHITE, 0, 0, true);
+      if (imageUrl.endsWith("1")) {
+        bitmap = getBitmapByText(600, 600, "脑补缩略图", 120, Color.BLACK, Color.WHITE, 0, 240, true);
+      } else {
+        int n = imageUrl.indexOf("pos=") + 4;
+        String title = imageUrl.substring(n, n + 3);
+        int bg = Color.WHITE;
+        int a = Integer.parseInt(title.substring(0, 1));
+        int b = Integer.parseInt(title.substring(2));
+        if ((a + b) % 2 == 0) {
+          bg = Color.LTGRAY;
+        }
+        bitmap = getBitmapByText(600, 600, title, 150, Color.BLACK, bg, 0, 225, true);
+      }
     }
     // end
     return bitmap;
