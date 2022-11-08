@@ -55,7 +55,7 @@ public:
 
     bool addTextureId(GLuint textureId);
 
-    void removeTexureId(GLuint textureId);
+    void removeTextureId(GLuint textureId);
 
     void clearCanvas();
 };

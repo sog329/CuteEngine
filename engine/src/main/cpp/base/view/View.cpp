@@ -163,7 +163,7 @@ bool View::addTextureId(GLuint textureId) {
     return canAdd;
 }
 
-void View::removeTexureId(GLuint textureId) {
+void View::removeTextureId(GLuint textureId) {
     map<GLuint, View *>::iterator it = mMapTextureId.find(textureId);
     if (it != mMapTextureId.end()) {
         mMapTextureId.erase(it);

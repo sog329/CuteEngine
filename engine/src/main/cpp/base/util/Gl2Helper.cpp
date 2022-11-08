@@ -100,7 +100,7 @@ void Gl2Helper::buildTextureId(int viewId, GLuint *ptTextureId) {
 void Gl2Helper::freeTextureId(int viewId, GLuint *ptTextureId) {
     View *ptView = ViewManager::getView(viewId);
     if (ptView != NULL) {
-        ptView->removeTexureId(*ptTextureId);
+        ptView->removeTextureId(*ptTextureId);
         glDeleteTextures(1, ptTextureId);
         *ptTextureId = GL_NONE;
     }
