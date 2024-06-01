@@ -69,7 +69,7 @@ public class CuteViewGL extends GLSurfaceView {
             }
           }
         };
-    setEGLConfigChooser(5, 6, 5, 0, 16, 0);
+//    setEGLConfigChooser(5, 6, 5, 0, 16, 0);
     setRenderer(rd);
     setRenderMode(RENDERMODE_CONTINUOUSLY);
     Engine.onCreate(this);
